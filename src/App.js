@@ -1,5 +1,13 @@
 import './App.css'
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 import LoginForm from './components/LoginForm'
+import Home from './components/Home'
+import SelectJob from './components/SelectJob'
+import ProtectedRoute from './components/ProtectedRoute'
+import NotFound from './components/NotFound'
+import FindJobs from './components/FindJobs'
+
+import Header from './components/Header'
 
 const employmentTypesList = [
   {
@@ -41,9 +49,15 @@ const salaryRangesList = [
 
 // Replace your code here
 const App = () => (
-  <div>
-    <LoginForm />
-  </div>
+  <BrowserRouter>
+    <Switch>
+      <ProtectedRoute exact path="/" component={Home} />
+      <Route exact path="/login" component={LoginForm} />
+      <ProtectedRoute exact path="/jobs" component={FindJobs} />
+      <ProtectedRoute exact path="/jobs/:id" component={SelectJob} />
+      <Route component={NotFound} />
+    </Switch>
+  </BrowserRouter>
 )
 
 export default App

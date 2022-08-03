@@ -1,0 +1,31 @@
+.employement_type_checkbox {
+  color: white;
+  margin-left: 0px;
+  margin-bottom: 5px;
+}
+
+.type_employment_ul {
+  list-style: none;
+  padding-left: 0px;
+  color: white;
+}
+
+.type_employment_label {
+  margin-right: 11px;
+}
+
+.hr_style {
+  width: 100%;
+  color: white;
+}
+
+.hr_style1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  color: white;
+}
+
+.salary_range_container {
+  color: white;
+}

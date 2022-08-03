@@ -1,0 +1,59 @@
+.each_card_list_job_container {
+  display: flex;
+  background-color: #202020;
+  color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  margin-top: 5px;
+  flex-direction: column;
+}
+
+.top_image_data {
+  display: flex;
+  align-items: flex-start;
+}
+
+.find_jobs_each_job_logo {
+  height: 60px;
+  width: 60px;
+}
+
+.star_ratings_align {
+  display: flex;
+}
+
+.each_company_title {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.top_right_each_job {
+  margin-left: 15px;
+}
+
+.each_company_title1 {
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: 7px;
+}
+
+.each_job_middle_cotainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+
+.middle_container_align_each {
+  display: flex;
+}
+
+.left_margin_style {
+  margin-left: 6px;
+}
+
+.each_job_hr_details {
+  width: 100%;
+  color: white;
+}

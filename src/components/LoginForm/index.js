@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import Cookies from 'js-cookie'
 import './index.css'
 
 class LoginForm extends Component {
@@ -16,6 +17,7 @@ class LoginForm extends Component {
           id="username"
           className="form_label_input"
           onChange={this.changeUser}
+          placeholder="username"
           value={userText}
         />
       </div>
@@ -38,6 +40,7 @@ class LoginForm extends Component {
           id="password"
           className="form_label_input"
           onChange={this.changePassword}
+          placeholder="password"
           value={passwordText}
         />
       </div>
@@ -51,7 +54,7 @@ class LoginForm extends Component {
   formClicked = async event => {
     event.preventDefault()
     const {userText, passwordText} = this.state
-    const userDetails = {userText, passwordText}
+    const userDetails = {username: userText, password: passwordText}
     const url = 'https://apis.ccbp.in/login'
     console.log(userDetails)
     const options = {
@@ -60,7 +63,22 @@ class LoginForm extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
-    console.log(data)
+    if (response.ok === true) {
+      console.log(data.jwt_token)
+      this.userCanLogin(data.jwt_token)
+    } else {
+      this.errorLogin(data.error_msg)
+    }
+  }
+
+  userCanLogin = jwtTokenPassed => {
+    Cookies.set('jwt_token', jwtTokenPassed, {expires: 30})
+    const {history} = this.props
+    history.replace('/')
+  }
+
+  errorLogin = errorMsg => {
+    this.setState({errorText: errorMsg})
   }
 
   render() {
@@ -79,8 +97,10 @@ class LoginForm extends Component {
 
           {this.setUsername()}
           {this.setPassword()}
-          <button className="login_button">Login</button>
-          <p>{errorText}</p>
+          <button type="submit" className="login_button">
+            Login
+          </button>
+          <p className="login_error">{errorText}</p>
         </form>
       </div>
     )

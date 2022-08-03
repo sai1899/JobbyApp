@@ -1,0 +1,131 @@
+.each_card_list_job_container_one {
+  display: flex;
+  background-color: #202020;
+  color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+.bakcground_conatiner_one {
+  padding-top: 10px;
+  background-color: black;
+  min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.top_image_data_one {
+  display: flex;
+  align-items: flex-start;
+}
+
+.find_jobs_each_job_logo_one {
+  height: 60px;
+  width: 60px;
+}
+
+.star_ratings_align_one {
+  display: flex;
+}
+
+.each_company_title_one {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.top_right_each_job_one {
+  margin-left: 15px;
+}
+
+.each_company_title1_one {
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: 7px;
+}
+
+.each_job_middle_cotainer_one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+
+.middle_container_align_each_one {
+  display: flex;
+}
+
+.left_margin_style_one {
+  margin-left: 6px;
+}
+
+.each_job_hr_details_one {
+  width: 100%;
+  color: white;
+}
+
+.skills_needed_one {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 550px;
+  margin-top: 20px;
+}
+
+.each_skill_needed {
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.all_languages_url {
+  height: 40px;
+  width: 50px;
+  margin-right: 5px;
+}
+
+.life_at_work_image {
+  width: 100%;
+  height: 140px;
+}
+
+.life_at_comapany_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.similar_jobs_conatiner {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.similar_para {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .skills_needed_one {
+    max-width: 850px;
+    flex-grow: 1;
+  }
+  .each_skill_needed {
+    width: 200px;
+  }
+  .life_at_comapany_flex {
+    display: flex;
+    flex-direction: row;
+  }
+  .life_at_work_image {
+    width: 30%;
+    margin-left: 20px;
+  }
+  .similar_jobs_conatiner {
+    display: flex;
+    flex-direction: row;
+  }
+}
